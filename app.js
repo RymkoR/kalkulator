@@ -57,10 +57,10 @@ document.getElementById("form").addEventListener("submit", function (e) {
   const formattedBonds = bonds.toLocaleString("pl-PL");
   const formattedIkze = ikze.toLocaleString("pl-PL");
 
-  document.getElementById("result").innerText =
-    `Łączna stopa zwrotu: ${totalReturn}%\n` +
-    `Depozyt: ${formattedDeposit} PLN\n` +
-    `Obligacje: ${formattedBonds} PLN\n` +
+  document.getElementById("result").innerHTML =
+    `<strong>Łączna stopa zwrotu: ${totalReturn}%</strong><br>` +
+    `Depozyt: ${formattedDeposit} PLN<br>` +
+    `Obligacje: ${formattedBonds} PLN<br>` +
     `IKZE: ${formattedIkze} PLN`;
 
   const ctx = document.getElementById("pieChart").getContext("2d");
